@@ -1,5 +1,16 @@
 # Analyze Tweet Data
 
+## Software Requirements
+* conda 4.6.3 or similar versions
+* python 3.7.2 (or python 3)
+* Packages
+  - pandas
+  - requests
+  - os
+  - tweepy
+  - timeit.default_timer
+  - json
+
 ## Part 1: Data Wrangling
 ### Gathering Data
 1. Enhanced Twitter Archive
@@ -20,6 +31,9 @@
 3. Additional Tweet Data
     * Additional tweet data including the counts of re-tweets and favorites which were omitted during the process of _enhancing_ the twitter archive were gathered by using Python's [Tweepy](http://www.tweepy.org/) library to query Twitter's API for each tweet's JSON data.
     * The JSON data of each tweet was written in its own line in the `tweet_json.txt` file which is assigned to the object `df_json`.
+4. Merge Datasets
+    * All three datasets, `df_archive`, `df_image`, and `df_json`, were merged on tweet ids.
+    * The merged dataset which is assigned to the object `df` was stored as `twitter_archive_master.csv`.
 
 ### Assessing Data
 
