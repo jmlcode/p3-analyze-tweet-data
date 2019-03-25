@@ -31,9 +31,6 @@
 3. Additional Tweet Data
     * Additional tweet data including the counts of re-tweets and favorites which were omitted during the process of _enhancing_ the twitter archive were gathered by using Python's [Tweepy](http://www.tweepy.org/) library to query Twitter's API for each tweet's JSON data.
     * The JSON data of each tweet was written in its own line in the `tweet_json.txt` file which is assigned to the object `df_json`.
-4. Merge Datasets
-    * All three datasets, `df_archive`, `df_image`, and `df_json`, were merged on tweet ids.
-    * The merged dataset which is assigned to the object `df` was stored as `twitter_archive_master.csv`.
 
 ### Assessing Data
 
