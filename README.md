@@ -10,6 +10,8 @@
   - tweepy
   - timeit.default_timer
   - json
+  - numpy
+  - copy
 
 ## Part 1: Data Wrangling
 ### Gathering Data
