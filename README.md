@@ -12,6 +12,27 @@
   - json
   - numpy
   - copy
+* `twitter_api.py` file
+  - The file returns Twitter API Wrapper for querying Twitter's API in _Section 3_ of __Gathering Data__ with the Tweet IDs obtained from the first dataset in _Section 1_ of __Gathering Data__.
+  - The file was imported to the notebook and was not tracked in the repository in order to prevent disclosure of private keys and tokens.
+  ```python
+    import tweepy
+
+    def twitter_api():
+
+      # Keys and Tokens
+      consumer_key = 'CONSUMER KEY'
+      consumer_secret = 'CONSUMER SECRET'
+      access_token = 'ACCESS TOKEN'
+      access_secret = 'ACCESS SECRET'
+
+      # OAuthHandler instance equipped with an access token for OAuth Authentication
+      auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+      auth.set_access_token(access_token, access_secret)
+
+      # twitter API wrapper
+      return tweepy.API(auth_handler = auth, wait_on_rate_limit = True, wait_on_rate_limit_notify = True)
+  ```
 
 ## Part 1: Data Wrangling
 ### Gathering Data
@@ -35,6 +56,8 @@
     * The JSON data of each tweet was written in its own line in the `tweet_json.txt` file which is assigned to the object `df_json`.
 
 ### Assessing Data
+* Each of the three datasets gathered above were assessed for quality and tidiness issues.
+* Only these observations from reviewing the datasets, which render cleaning necessary in the next section, were documented.
 
 ### Cleaning Data
 
