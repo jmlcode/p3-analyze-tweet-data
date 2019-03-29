@@ -1,4 +1,5 @@
 # Analyze Tweet Data
+Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.com/dog_rates) and visualization of insights with Python in Jupyter Notebook. Project is motivated by and thus focuses on the data wrangling process that covers gathering, assessing and cleaning data. Various methods including programmatic approaches such as querying Twitter API with Python's Tweepy package were used to collect Tweets and relevant metadata.
 
 ## Software Requirements
 * conda 4.6.3 or similar versions
@@ -7,7 +8,7 @@
   - pandas
   - requests
   - os
-  - tweepy
+  - tweepy 3.7.0
   - timeit.default_timer
   - json
   - numpy
@@ -68,3 +69,5 @@ Jong Min (Jay) Lee [jmlee5629@gmail.com]
 
 ## Acknowledgement
 * This project was completed as a mandatory requirement for the _Data Wrangling_ unit from the __Data Analyst Nanodegree__ program at [Udacity](https://www.udacity.com/).
+* Step-by-step guidance from the [Get Started](https://developer.twitter.com/en/account/get-started) page in __Twitter Developers__ site was referenced to create an App, generate keys and tokens, and query Twitter API.
+* [Tweepy Documentation](http://docs.tweepy.org/en/3.7.0/) was referenced to search for and understand the methods from the Tweepy package and their specifications and arguments which were applicable to querying Twitter API and gathering JSON data.
