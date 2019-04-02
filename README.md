@@ -65,6 +65,11 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   1. _Define_: translate the assessment to an actionable plan for cleaning the data
   2. _Code_: programmatically clean the data based on the definition
   3. _Test_: check if the cleaned data reflect the desired outcome
+* The two cleaned datasets from __Enhanced Twitter Archive__ and __Additional Tweet Data__ were merged to create `df_archive_master`.
+* Clean versions of the three datasets were stored as separate `.csv` files.
+  1. `df_archive_clean` as `twitter_archive_clean.csv`
+  2. `df_archive_master` as `twitter_archive_master.csv`
+  3. `df_image_clean` as `image_prediction_clean.csv`
 
 ## Part 2: Exploratory Data Analysis and Data Visualization
 
