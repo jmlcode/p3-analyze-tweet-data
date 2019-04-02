@@ -61,6 +61,10 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
 * Only these observations from reviewing the datasets, which render cleaning necessary in the next section, were documented.
 
 ### Cleaning Data
+* Three sequential steps listed below were used to address each assessment from the __Assessing Data__ section.
+  1. _Define_: translate the assessment to an actionable plan for cleaning the data
+  2. _Code_: programmatically clean the data based on the definition
+  3. _Test_: check if the cleaned data reflect the desired outcome
 
 ## Part 2: Exploratory Data Analysis and Data Visualization
 
@@ -71,3 +75,5 @@ Jong Min (Jay) Lee [jmlee5629@gmail.com]
 * This project was completed as a mandatory requirement for the _Data Wrangling_ unit from the __Data Analyst Nanodegree__ program at [Udacity](https://www.udacity.com/).
 * Step-by-step guidance from the [Get Started](https://developer.twitter.com/en/account/get-started) page in __Twitter Developers__ site was referenced to create an App, generate keys and tokens, and query Twitter API.
 * [Tweepy Documentation](http://docs.tweepy.org/en/3.7.0/) was referenced to search for and understand the methods from the Tweepy package and their specifications and arguments which were applicable to querying Twitter API and gathering JSON data.
+* Assessment and cleaning of untidy data were motivated by the framework for tidying data detailed in Hadley Wickham's _Tidy Data_.
+  Wickham, H. (2014). Tidy Data. _Journal of Statistical Software, 59_(10). doi:10.18637/jss.v059.i10
