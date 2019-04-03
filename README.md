@@ -77,5 +77,6 @@ Jong Min (Jay) Lee [jmlee5629@gmail.com]
 * This project was completed as a mandatory requirement for the _Data Wrangling_ unit from the __Data Analyst Nanodegree__ program at [Udacity](https://www.udacity.com/).
 * Step-by-step guidance from the [Get Started](https://developer.twitter.com/en/account/get-started) page in __Twitter Developers__ site was referenced to create an App, generate keys and tokens, and query Twitter API.
 * [Tweepy Documentation](http://docs.tweepy.org/en/3.7.0/) was referenced to search for and understand the methods from the Tweepy package and their specifications and arguments which were applicable to querying Twitter API and gathering JSON data.
-* Assessment and cleaning of untidy data were motivated by the framework for tidying data detailed in Hadley Wickham's _Tidy Data_.
+* Assessment and cleaning of untidy data were motivated by the extensive nature this process in data analysis (Dasu and Johnson 2003) and the framework for tidying data (Wickham 2014).
+  Dasu T, Johnson T (2003). _Exploratory Data Mining and Data Cleaning._ John Wiley & Sons.
   Wickham, H. (2014). Tidy Data. _Journal of Statistical Software, 59_(10). doi:10.18637/jss.v059.i10
