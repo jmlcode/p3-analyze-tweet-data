@@ -61,10 +61,7 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
 * Only these observations from reviewing the datasets, which render cleaning necessary in the next section, were documented.
 
 ### Cleaning Data
-* Three sequential steps listed below were used to address each assessment from the __Assessing Data__ section.
-  1. _Define_: translate the assessment to an actionable plan for cleaning the data
-  2. _Code_: programmatically clean the data based on the definition
-  3. _Test_: check if the cleaned data reflect the desired outcome
+* Each assessment from the __Assessing Data__ section was addressed in three sequential steps: define, code, and test.
 * The two cleaned datasets from __Enhanced Twitter Archive__ and __Additional Tweet Data__ were merged to create `df_archive_master`.
 * Clean versions of the three datasets were stored as separate `.csv` files.
   1. `df_archive_clean` as `twitter_archive_clean.csv`
