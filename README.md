@@ -13,6 +13,9 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   - json
   - numpy
   - copy
+  - datetime
+  - matplotlib.pyplot
+  - seaborn
 * `twitter_api.py` file
   - The file returns Twitter API Wrapper for querying Twitter's API in _Section 3_ of __Gathering Data__ with the Tweet IDs obtained from the first dataset in _Section 1_ of __Gathering Data__.
   - The file was imported to the notebook and was not tracked in the repository in order to prevent disclosure of private keys and tokens.
@@ -69,6 +72,10 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   3. `df_image_clean` as `image_prediction_clean.csv`
 
 ## Part 2: Exploratory Data Analysis and Data Visualization
+1. Time of the Day when _WeRateDogs (@dogrates)_ Shows Most Activity
+    * Each day of the week was divided into 24-hour increments.
+    * Tweet activity was quantified by the percentage of tweets in each increment for a given day.
+    * Bar plots and statistics (mean, standard deviation) of the 24 percentages for each day are presented.
 
 ## Author
 Jong Min (Jay) Lee [jmlee5629@gmail.com]
