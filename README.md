@@ -75,7 +75,7 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
 1. Time of the Day when _WeRateDogs (@dogrates)_ Shows Most Activity
     * Each day of the week was divided into 24-hour increments.
     * Tweet activity was quantified by the percentage of tweets in each increment for a given day.
-    * Bar plots and statistics (mean, standard deviation) of the 24 percentages for each day are presented.
+    * Bar plots, box plots and statistics (mean, standard deviation, quartiles) of the 24 percentages for each day are presented.
 
 ## Author
 Jong Min (Jay) Lee [jmlee5629@gmail.com]
