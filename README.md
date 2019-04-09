@@ -76,6 +76,7 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
     * Each day of the week was divided into 24-hour increments.
     * Tweet activity was quantified by the percentage of tweets in each increment for a given day.
     * Bar plots, box plots and statistics (mean, standard deviation, quartiles) of the 24 percentages for each day are presented.
+2. Correlation between Favorite Counts and Retweet Counts
 
 ## Author
 Jong Min (Jay) Lee [jmlee5629@gmail.com]
