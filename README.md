@@ -16,6 +16,7 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   - datetime
   - matplotlib.pyplot
   - seaborn
+  - statsmodels.api
 * `twitter_api.py` file
   - The file returns Twitter API Wrapper for querying Twitter's API in _Section 3_ of __Gathering Data__ with the Tweet IDs obtained from the first dataset in _Section 1_ of __Gathering Data__.
   - The file was imported to the notebook and was not tracked in the repository in order to prevent disclosure of private keys and tokens.
@@ -77,6 +78,11 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
     * Tweet activity was quantified by the percentage of tweets in each increment for a given day.
     * Bar plots, box plots and statistics (mean, standard deviation, quartiles) of the 24 percentages for each day are presented.
 2. Correlation between Favorite Counts and Retweet Counts
+    * Data points with favorite count of 0 were defined as outliers.
+    * For both sets of favorite counts and retweet counts pairs, one including and another excluding outliers,
+      - Two scatter plots were created.
+      - Two linear regressions were performed.
+      - Correlation Coefficients and R-squared values are presented.
 
 ## Author
 Jong Min (Jay) Lee [jmlee5629@gmail.com]
