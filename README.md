@@ -9,6 +9,11 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   - requests
   - os
   - tweepy 3.7.0
+    ```bash
+    git clone git://github.com/tweepy/tweepy.git
+    cd tweepy
+    python setup.py install
+    ```
   - timeit.default_timer
   - json
   - numpy
@@ -17,6 +22,11 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   - matplotlib.pyplot
   - seaborn
   - statsmodels.api
+  - TextBlob
+    ```bash
+    pip install -U textblob
+    python -m textblob.download_corpora
+    ```
 * `twitter_api.py` file
   - The file returns Twitter API Wrapper for querying Twitter's API in _Section 3_ of __Gathering Data__ with the Tweet IDs obtained from the first dataset in _Section 1_ of __Gathering Data__.
   - The file was imported to the notebook and was not tracked in the repository in order to prevent disclosure of private keys and tokens.
@@ -83,6 +93,10 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
       - Two scatter plots were created.
       - Two linear regressions were performed.
       - Correlation Coefficients and R-squared values are presented.
+3. Comparison of Dog Ratings and Sentiment of Tweets
+    * Numeric dog ratings were categorized into _low_, _medium_, and _high_ ratings.
+    * Polarity scores of the text data of original tweets were gathered from sentiment analysis.
+    * Three histograms of the polarity scores, one for each category of dog ratings, are presented.
 
 ## Author
 Jong Min (Jay) Lee [jmlee5629@gmail.com]
@@ -90,7 +104,8 @@ Jong Min (Jay) Lee [jmlee5629@gmail.com]
 ## Acknowledgement
 * This project was completed as a mandatory requirement for the _Data Wrangling_ unit from the __Data Analyst Nanodegree__ program at [Udacity](https://www.udacity.com/).
 * Step-by-step guidance from the [Get Started](https://developer.twitter.com/en/account/get-started) page in __Twitter Developers__ site was referenced to create an App, generate keys and tokens, and query Twitter API.
-* [Tweepy Documentation](http://docs.tweepy.org/en/3.7.0/) was referenced to search for and understand the methods from the Tweepy package and their specifications and arguments which were applicable to querying Twitter API and gathering JSON data.
+* [Tweepy](http://docs.tweepy.org/en/3.7.0/) documentation was referenced to search for and understand the methods from the Tweepy package and their specifications and arguments which were applicable to querying Twitter API and gathering JSON data.
 * Assessment and cleaning of untidy data were motivated by the extensive nature this process in data analysis (Dasu and Johnson 2003) and the framework for tidying data (Wickham 2014).
   - Dasu T, Johnson T (2003). _Exploratory Data Mining and Data Cleaning._ John Wiley & Sons.
   - Wickham, H. (2014). Tidy Data. _Journal of Statistical Software, 59_(10). doi:10.18637/jss.v059.i10
+* [TextBlob](https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis) documentation was referenced to create a `TextBlob` with text data and obtain _polarity_ score from the `sentiment` property.
