@@ -50,6 +50,8 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   ```
 
 ## Part 1: Data Wrangling
+Three raw datasets gathered in the first step of data wrangling and three cleaned datasets obtained after the last step of data wrangling are all available in the `\data` directory.
+
 ### Gathering Data
 1. Enhanced Twitter Archive
     * Udacity was provided with [WeRateDogs](https://twitter.com/dog_rates) Twitter Archive which contains basic tweet data for all 5,000+ tweets.
