@@ -97,6 +97,10 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
     * Numeric dog ratings were categorized into _low_, _medium_, and _high_ ratings.
     * Polarity scores of the text data of original tweets were gathered from sentiment analysis.
     * Three histograms of the polarity scores, one for each category of dog ratings, are presented.
+4. Accuracy and Precision of Predicting Dog's Breeds from Images
+    * The performance of the neural network in recognizing images and predicting each dog's breed was assessed with both statistics and visualizations.
+      - Mean proportion of predictions with dog breeds for each level of prediction
+      - Histogram for the distribution of confidence levels for each level of prediction and its center (median)
 
 ## Author
 Jong Min (Jay) Lee [jmlee5629@gmail.com]
