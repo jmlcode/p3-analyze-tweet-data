@@ -1,5 +1,5 @@
 # Analyze Tweet Data
-Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.com/dog_rates) and visualization of insights with Python in Jupyter Notebook. Project is motivated by and thus focuses on the data wrangling process that covers gathering, assessing and cleaning data. Various methods including programmatic approaches such as querying Twitter API with Python's Tweepy package were used to collect Tweets and relevant metadata.
+Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.com/dog_rates) and visualization of insights with Python in Jupyter Notebook. Project was motivated by and thus focuses on the data wrangling process that covers gathering, assessing and cleaning data. Various methods including programmatic approaches such as querying Twitter API with Python's Tweepy package were used to collect Tweets and relevant metadata.
 
 ## Software Requirements
 * conda 4.6.3 or similar versions
@@ -50,7 +50,13 @@ Wrangling and analysis of Tweets from [WeRateDogs (@dogrates)](https://twitter.c
   ```
 
 ## Part 1: Data Wrangling
-Three raw datasets gathered in the first step of data wrangling and three cleaned datasets obtained after the last step of data wrangling are all available in the `\data` directory.
+* Content of the first part of the project including all code blocks for data wrangling is documented in the Jupyter Notebook file, `analyze_tweet_1_wrangle.ipynb`. The HTML file `analyze_tweet_part1_wrangle.html` was published from this notebook file.
+* Three raw datasets gathered in the first step of data wrangling and the clean version of the master dataset obtained after the last step of data wrangling are all available in the `\data` directory.
+    * Raw Datasets
+      - `twitter_archive_enhanced.csv`
+      - `image-predictions.tsv`
+      - `tweet_json.txt`
+    * Merged Dataset: `twitter_archive_master.csv`
 
 ### Gathering Data
 1. Enhanced Twitter Archive
@@ -59,50 +65,40 @@ Three raw datasets gathered in the first step of data wrangling and three cleane
     * The enhanced Twitter archive was made available as `twitter_archive_enhanced.csv` for manual download and is assigned to the object `df_archive`.
 2. Image Predictions
     * Udacity ran the images included in the tweets from the enhanced Twitter archive through a [neural network](https://www.youtube.com/watch?v=2-Ol7ZB0MmU) and made top three predictions of each dog's breed.
-    * The predictions data stored in `image-predictions.tsv` contains the following columns of data.
-        - `tweet_id`: last portion of the tweet URL after _status/_
-        - `jpg_url`: image URL
-        - `img_num`: image number ranging from 1 to 4 (a tweet can have up to four images)
-        - `p1`, `p2`, `p3`: first, second, and third best predictions of the dog's breed
-        - `p1_conf`, `p2_conf`, `p3_conf`: confidence of the algorithm in its first, second, and third predictions
-        - `p1_dog`, `p2_dog`, `p3_dog`: whether the first, second, and third predictions are a breed of dog
-    * The `image-predictions.tsv` file hosted in Udacity's server was programmatically downloaded by using the [Requests](http://docs.python-requests.org/en/master/) library to submit a request to the [URL](https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv) and was assigned to the object `df_image`.
+    * The `image-predictions.tsv` file hosted in Udacity's server is programmatically downloaded by using the [Requests](http://docs.python-requests.org/en/master/) library to submit a request to the [URL](https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv) and is assigned to the object `df_image`.
 3. Additional Tweet Data
-    * Additional tweet data which were omitted during the process of _enhancing_ the twitter archive were gathered by using Python's [Tweepy](http://www.tweepy.org/) library to query Twitter's API.
-    * The JSON data of each tweet was dumped in the `tweet_json.txt` file.
-    * Only the re-tweet and favorite counts for each tweet was extracted and assigned to the object `df_json`.
+    * Additional tweet data which were omitted during the process of _enhancing_ the twitter archive are gathered by using Python's [Tweepy](http://www.tweepy.org/) library to query Twitter's API.
+    * The JSON data of each tweet is dumped in the `tweet_json.txt` file.
+    * Only the re-tweet and favorite counts for each tweet are extracted and assigned to the object `df_json`.
 
 ### Assessing Data
-* Each of the three datasets gathered above were assessed for quality and tidiness issues.
-* Only these observations from reviewing the datasets, which render cleaning necessary in the next section, were documented.
+* Each of the three datasets gathered above are assessed for quality and tidiness issues.
+* Only these observations from reviewing the datasets, which render cleaning necessary in the next section, are documented.
 
 ### Cleaning Data
-* Each assessment from the __Assessing Data__ section was addressed in three sequential steps: define, code, and test.
-* The two cleaned datasets from __Enhanced Twitter Archive__ and __Additional Tweet Data__ were merged to create `df_archive_master`.
-* Clean versions of the three datasets were stored as separate `.csv` files.
-  1. `df_archive_clean` as `twitter_archive_clean.csv`
-  2. `df_archive_master` as `twitter_archive_master.csv`
-  3. `df_image_clean` as `image_prediction_clean.csv`
+* Each assessment from the __Assessing Data__ section is addressed in three sequential steps: define, code, and test.
+* The clean versions of the three datasets are merged to create `df_archive_master`, which is stored as a separate `.csv` file, `twitter_archive_master.csv`.
 
 ## Part 2: Exploratory Data Analysis and Data Visualization
-1. Time of the Day when _WeRateDogs (@dogrates)_ Shows Most Activity
-    * Each day of the week was divided into 24-hour increments.
-    * Tweet activity was quantified by the percentage of tweets in each increment for a given day.
-    * Bar plots, box plots and statistics (mean, standard deviation, quartiles) of the 24 percentages for each day are presented.
-2. Correlation between Favorite Counts and Retweet Counts
-    * Data points with favorite count of 0 were defined as outliers.
-    * For both sets of favorite counts and retweet counts pairs, one including and another excluding outliers,
-      - Two scatter plots were created.
-      - Two linear regressions were performed.
-      - Correlation Coefficients and R-squared values are presented.
-3. Comparison of Dog Ratings and Sentiment of Tweets
-    * Numeric dog ratings were categorized into _low_, _medium_, and _high_ ratings.
-    * Polarity scores of the text data of original tweets were gathered from sentiment analysis.
-    * Three histograms of the polarity scores, one for each category of dog ratings, are presented.
-4. Accuracy and Precision of Predicting Dog's Breeds from Images
-    * The performance of the neural network in recognizing images and predicting each dog's breed was assessed with both statistics and visualizations.
-      - Mean proportion of predictions with dog breeds for each level of prediction
-      - Histogram for the distribution of confidence levels for each level of prediction and its center (median)
+* Content of the second part of the project including all code blocks for analysis is documented in the Jupyter Notebook file, `analyze_tweet_2_eda.ipynb`. The HTML file `analyze_tweet_part2_eda.html` was published from this notebook file.
+* Investigation of the following four topics are discussed.
+  1. Time of the Day when _WeRateDogs (@dogrates)_ Shows Most Activity
+      * Each day of the week is divided into 24-hour increments.
+      * Tweet activity is quantified by the percentage of tweets in each increment for a given day.
+      * Bar plots, box plots and statistics (mean, standard deviation, quartiles) of the 24 percentages for each day are presented.
+  2. Correlation between Favorite Counts and Retweet Counts
+      * Correlation between two variables are discussed with a scatter plot and their correlation coefficient.
+      * Results from linear regression are applied to further investigate the correlation.
+        - R-squared value and its significance are presented.
+        - Linear fit is built and added to the scatter plot.
+  3. Comparison of Dog Ratings and Sentiment of Tweets
+      * Numeric dog ratings are categorized into _low_, _medium_, and _high_ ratings.
+      * Polarity scores of the text data of Tweets are gathered from sentiment analysis.
+      * Three histograms of the polarity scores, one for each category of dog ratings, are presented.
+  4. Accuracy and Precision of Predicting Dog's Breeds from Images
+      * The performance of the neural network in recognizing images and predicting each dog's breed is assessed with both statistics and visualizations.
+        - Mean proportion of predictions with dog breeds for each level of prediction
+        - Histogram for the distribution of confidence levels for each level of prediction and its center (median)
 
 ## Author
 Jong Min (Jay) Lee [jmlee5629@gmail.com]
