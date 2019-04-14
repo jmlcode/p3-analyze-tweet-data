@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>wrangle_act</title>
+<title>analyze_tweet_1_wrangle</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13125,14 +13125,14 @@ div#notebook {
 <li><a href="#reference">Reference</a></li>
 </ul>
 <p><a id='intro'></a></p>
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>The process of cleaning and preparing data defines a bulk (approximately 80%) of data analysis (Dasu and Johnson 2003). In fact, data often must be cleaned and prepared multiple times throughout the course of analysis as new questions arise from a series of observations or new data is gathered to address these additional questions (Wickham 2014). To explore the vast array of possible methods for <em>cleaning and preparing data</em> and understand the significance of this process in data analysis, this project was divided into two sections, <strong>Data Wrangling</strong> and <strong>Exploratory Data Analysis and Data Visualization</strong>, for analyzing Tweets from <a href="https://twitter.com/dog_rates"><em>WeRateDogs (@dogrates)</em></a>.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>The process of cleaning and preparing data defines a bulk (approximately 80%) of data analysis (Dasu and Johnson 2003). In fact, data often must be cleaned and prepared multiple times throughout the course of analysis as new questions arise from a series of observations or new data is gathered to address these additional questions (Wickham 2014). To explore the vast array of possible methods for <em>cleaning and preparing data</em> and understand the significance of this process in data analysis, this project was divided into two sections, <strong>Part 1: Data Wrangling</strong> and <strong>Part 2: Exploratory Data Analysis (EDA) and Data Visualization</strong>, for analyzing Tweets from <a href="https://twitter.com/dog_rates"><em>WeRateDogs (@dogrates)</em></a>.</p>
 <p>This document covers the first section, the <em>data wrangling</em> phase of analyzing Tweets, which encompasses gathering, assessing, and cleaning data.</p>
 <ul>
 <li>Each of the three sources of data on Tweets from <em>WeRateDogs (@dogrates)</em> were gathered with different methods: manually downloading available data, performing a GET Request to call the URL that hosts the data, and querying Twitter API for Tweet data. </li>
 <li>Then, these datasets were assessed for two types of issues, quality and tidiness.</li>
 <li>The identified issues were addressed by defining a series of cleaning operations for each issue, translating the plans into codes, performing each cleaning operation, and verifying the resolutions.</li>
 </ul>
-<p>At the end of this phase, cleaned datasets were stored as separate files so that these <em>functional</em> datasets structured in formats that permit analysis are readily available for the second phase of the data analysis, <em>exploratory data analysis (EDA) and data visualization</em>. This second section of the project, which deals with exploring and augmenting the data to maximize the potential of the analyses and deriving insights from visualizations, is covered in a separate document.</p>
+<p>At the end of this phase, cleaned datasets were stored as a separate file so that this <em>functional</em> dataset structured in formats that permit and potentially streamline analysis are readily available for the next phase of the data analysis. <strong>Part 2: Exploratory Data Analysis (EDA) and Data Visualization</strong> of the project, which deals with exploring and augmenting the data to maximize the potential of the analyses and deriving insights from visualizations, is covered in the separate file, <code>analyze_tweet_part2_eda.html</code>.</p>
 <p>All relevant packages for wrangling the desired Tweet data from <em>WeRateDogs (@dogrates)</em> are imported below.</p>
 
 </div>
@@ -16263,9 +16263,6 @@ Tweet ID: 758854675097526272 (Count: 899)
  - Success
 
 Tweet ID: 758828659922702336 (Count: 900)
- - Success
-
-Tweet ID: 758740312047005698 (Count: 901)
 </pre>
 </div>
 </div>
@@ -16276,7 +16273,7 @@ Tweet ID: 758740312047005698 (Count: 901)
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Rate limit reached. Sleeping for: 713
+<pre>Rate limit reached. Sleeping for: 707
 </pre>
 </div>
 </div>
@@ -16288,6 +16285,9 @@ Tweet ID: 758740312047005698 (Count: 901)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre> - Success
+
+Tweet ID: 758740312047005698 (Count: 901)
+ - Success
 
 Tweet ID: 758474966123810816 (Count: 902)
  - Success
@@ -18045,7 +18045,7 @@ Tweet ID: 693155686491000832 (Count: 1486)
  - Success
 
 Tweet ID: 693109034023534592 (Count: 1487)
- - Success
+ - Fail
 
 Tweet ID: 693095443459342336 (Count: 1488)
  - Success
@@ -18984,6 +18984,9 @@ Tweet ID: 677228873407442944 (Count: 1799)
  - Success
 
 Tweet ID: 677187300187611136 (Count: 1800)
+ - Success
+
+Tweet ID: 676975532580409345 (Count: 1801)
 </pre>
 </div>
 </div>
@@ -18994,7 +18997,7 @@ Tweet ID: 677187300187611136 (Count: 1800)
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Rate limit reached. Sleeping for: 719
+<pre>Rate limit reached. Sleeping for: 185
 </pre>
 </div>
 </div>
@@ -19006,9 +19009,6 @@ Tweet ID: 677187300187611136 (Count: 1800)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre> - Success
-
-Tweet ID: 676975532580409345 (Count: 1801)
- - Success
 
 Tweet ID: 676957860086095872 (Count: 1802)
  - Success
@@ -20675,8 +20675,8 @@ Tweet ID: 666029285002620928 (Count: 2355)
 Tweet ID: 666020888022790149 (Count: 2356)
  - Success
 
-Query took 31.98 minutes.
-Query failed for 17 tweets.
+Query took 32.61 minutes.
+Query failed for 18 tweets.
 </pre>
 </div>
 </div>
@@ -20749,20 +20749,20 @@ Query failed for 17 tweets.
     <tr>
       <th>0</th>
       <td>892420643555336193</td>
-      <td>8219</td>
-      <td>37722</td>
+      <td>8212</td>
+      <td>37667</td>
     </tr>
     <tr>
       <th>1</th>
       <td>892177421306343426</td>
-      <td>6077</td>
-      <td>32385</td>
+      <td>6072</td>
+      <td>32353</td>
     </tr>
     <tr>
       <th>2</th>
       <td>891815181378084864</td>
-      <td>4020</td>
-      <td>24391</td>
+      <td>4015</td>
+      <td>24372</td>
     </tr>
   </tbody>
 </table>
@@ -20779,7 +20779,7 @@ Query failed for 17 tweets.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id='assess'></a></p>
-<h2 id="Assessing-Data">Assessing Data<a class="anchor-link" href="#Assessing-Data">&#182;</a></h2><p>The three datasets collected in <strong>Gathering Data</strong> were assessed for quality issues which deal with the content of the data and tidiness issues which pertain to the structure of the data. Only the observations, which render cleaning necessary in <strong>Cleaning Data</strong>, were documented.</p>
+<h2 id="Assessing-Data">Assessing Data<a class="anchor-link" href="#Assessing-Data">&#182;</a></h2><p>The three datasets collected in <strong>Gathering Data</strong> were assessed for quality issues which deal with the content of the data and tidiness issues which pertain to the structure of the data. A total of 14 quality issues and two tidiness issues were observed. Only the observations of these issues, which render cleaning necessary in <strong>Cleaning Data</strong>, were documented.</p>
 <p>In this step of the data wrangling phase, a copy of each dataset was created and assessed. However, the actual datasets can still be reviewed for quality and tidiness issues, and creating copies of these datasets can be postponed to the next step of the data wrangling phase.</p>
 
 </div>
@@ -20810,12 +20810,13 @@ Query failed for 17 tweets.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Enhanced-Twitter-Archive">1. Enhanced Twitter Archive<a class="anchor-link" href="#1.-Enhanced-Twitter-Archive">&#182;</a></h3><ol>
+<h3 id="1.-Enhanced-Twitter-Archive">1. Enhanced Twitter Archive<a class="anchor-link" href="#1.-Enhanced-Twitter-Archive">&#182;</a></h3><p><strong>Quality Issues</strong></p>
+<ol>
 <li>Data type for the <code>tweet_id</code> column is integer, instead of string (object). [see <em>assessment 1.2</em>]</li>
 <li>The two columns <code>in_reply_to_status_id</code> and <code>in_reply_to_user_id</code> appear to be outside the scope of the interest of this project. [see <em>assessments 1.1 and 1.2</em> and documentation on <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object.html">Tweet Object</a>]</li>
 <li>Data type for the <code>timestamp</code> column is object, instead of datetime. [see <em>assessment 1.2</em>]</li>
 <li>The four possible values for the <code>source</code> column not only indicate the source of the tweet but includes the HTML tags and attributes. [see <em>assessment 1.3</em>]</li>
-<li>181 tweets were created by re-tweeting existing tweets. [see <em>assessments 1.4.1 ~ 1.4.3</em>]</li>
+<li>181 tweets were created by re-tweeting existing tweets. All retweets have non-<code>NaN</code> values, and all original tweets have <code>NaN</code> for the three columns <code>retweeted_status_id</code>, <code>retweeted_status_user_id</code>, <code>retweeted_status_timestamp</code>. [see <em>assessments 1.4.1 ~ 1.4.4</em>]</li>
 <li>The <code>expanded_urls</code> column does not show meaningful information besides the tweet id which is already listed under the <code>tweet_id</code> column. [see <em>assessment 1.1</em>]</li>
 <li>23 dog ratings extracted from the tweet are inaccurate in that these ratings have values for the <code>rating_denominator</code> column other than 10. [see <em>assessments 1.5.1, 1.5.2</em>]</li>
 <li>109 names of dogs in the <code>name</code> column are inaccurate. [see <em>assessments 1.6.1 ~ 1.6.4</em>]    <ul>
@@ -20826,6 +20827,10 @@ Query failed for 17 tweets.
 </ol>
 <ol>
 <li>The five columns, <code>name</code>, <code>doggo</code>, <code>floofer</code>, <code>pupper</code>, and <code>puppo</code>, use "None" instead of <code>NaN</code> for missing values. [see <em>assessment 1.1</em>]</li>
+<li>14 Tweets have multiple dog stages. [see <em>assessment 1.7</em>]</li>
+</ol>
+<p><strong>Tidiness Issue</strong></p>
+<ol>
 <li>Four possible dog "stages", doggo, floofer, pupper, and puppo, are shown as column headers although these "stages" are not variable names. [see <em>assessment 1.1</em>]</li>
 </ol>
 
@@ -20895,100 +20900,100 @@ Query failed for 17 tweets.
   </thead>
   <tbody>
     <tr>
-      <th>1343</th>
-      <td>704761120771465216</td>
+      <th>1459</th>
+      <td>695064344191721472</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2016-03-01 20:11:59 +0000</td>
+      <td>2016-02-04 02:00:27 +0000</td>
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
-      <td>This pupper killed this great white in an epic...</td>
+      <td>This may be the greatest video I've ever been ...</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>https://twitter.com/dog_rates/status/704761120...</td>
+      <td>https://twitter.com/dog_rates/status/695064344...</td>
+      <td>4</td>
+      <td>10</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>373</th>
+      <td>828376505180889089</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2017-02-05 22:55:23 +0000</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Beebop. Her name means "Good Dog" in r...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/828376505...</td>
       <td>13</td>
       <td>10</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>pupper</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>911</th>
-      <td>757597904299253760</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2016-07-25 15:26:30 +0000</td>
-      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
-      <td>RT @jon_hill987: @dog_rates There is a cunning...</td>
-      <td>7.575971e+17</td>
-      <td>280479778.0</td>
-      <td>2016-07-25 15:23:28 +0000</td>
-      <td>https://twitter.com/jon_hill987/status/7575971...</td>
-      <td>11</td>
-      <td>10</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>pupper</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>1613</th>
-      <td>685315239903100929</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2016-01-08 04:21:00 +0000</td>
-      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
-      <td>I would like everyone to appreciate this pup's...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://twitter.com/dog_rates/status/685315239...</td>
-      <td>11</td>
-      <td>10</td>
-      <td>None</td>
+      <td>Beebop</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
     </tr>
     <tr>
-      <th>2244</th>
-      <td>667886921285246976</td>
+      <th>267</th>
+      <td>841680585030541313</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>2015-11-21 02:07:05 +0000</td>
+      <td>2017-03-14 16:01:03 +0000</td>
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
-      <td>This is Erik. He's fucken massive. But also ki...</td>
+      <td>This is Penny. She's a dragon slayer. Feared b...</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>https://twitter.com/dog_rates/status/667886921...</td>
-      <td>11</td>
-      <td>10</td>
-      <td>Erik</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>1812</th>
-      <td>676811746707918848</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2015-12-15 17:11:09 +0000</td>
-      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
-      <td>Say hello to Penny &amp;amp; Gizmo. They are pract...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://twitter.com/dog_rates/status/676811746...</td>
-      <td>9</td>
+      <td>https://twitter.com/dog_rates/status/841680585...</td>
+      <td>12</td>
       <td>10</td>
       <td>Penny</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>689</th>
+      <td>787717603741622272</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2016-10-16 18:11:26 +0000</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Tonks. She is a service puppo. Can hea...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/787717603...</td>
+      <td>13</td>
+      <td>10</td>
+      <td>Tonks</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>puppo</td>
+    </tr>
+    <tr>
+      <th>1518</th>
+      <td>690932576555528194</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2016-01-23 16:22:17 +0000</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Buddy. He's testing out the water. Suc...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/690932576...</td>
+      <td>12</td>
+      <td>10</td>
+      <td>Buddy</td>
       <td>None</td>
       <td>None</td>
       <td>None</td>
@@ -21201,8 +21206,8 @@ memory usage: 313.0+ KB
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.5.1: number of values in rating_denominator column besides 10</span>
-<span class="p">(</span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">rating_denominator</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.4.4: number of all non-na&#39;s rows in three retweeted columns</span>
+<span class="n">df_archive_clean</span><span class="p">[[</span><span class="s1">&#39;retweeted_status_id&#39;</span><span class="p">,</span> <span class="s1">&#39;retweeted_status_user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;retweeted_status_timestamp&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -21221,7 +21226,7 @@ memory usage: 313.0+ KB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>23</pre>
+<pre>181</pre>
 </div>
 
 </div>
@@ -21233,6 +21238,40 @@ memory usage: 313.0+ KB
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.5.1: number of values in rating_denominator column besides 10</span>
+<span class="p">(</span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">rating_denominator</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>23</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.5.2: extract rating-like substring from tweet text</span>
@@ -21259,7 +21298,7 @@ memory usage: 313.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -21463,7 +21502,7 @@ memory usage: 313.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># reset the option configured in assessment 1.5.2</span>
@@ -21477,46 +21516,11 @@ memory usage: 313.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.6.1: number of values in name column that begins with a lower case alphabet</span>
 <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="s1">&#39;(^[a-z])&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>109</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.6.2: number of values in name column that begins with a lower case alphabet</span>
-<span class="n">error_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">name</span><span class="p">]</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;name in @error_name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -21547,6 +21551,41 @@ memory usage: 313.0+ KB
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.6.2: number of values in name column that begins with a lower case alphabet</span>
+<span class="n">error_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">name</span><span class="p">]</span>
+<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;name in @error_name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>109</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.6.3: values in name column that begins with a lower case alphabet</span>
@@ -21603,7 +21642,7 @@ space
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.6.4: extract name-like string from tweet text</span>
@@ -21630,7 +21669,7 @@ space
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -22039,7 +22078,7 @@ space
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># reset the option configured in assessment 1.6.4</span>
@@ -22051,11 +22090,49 @@ space
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 1.7: number of rows with more than one dog stages</span>
+<span class="p">((</span><span class="n">df_archive_clean</span><span class="p">[[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">]]</span> <span class="o">!=</span> <span class="s2">&quot;None&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>14</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-Image-Predictions">2. Image Predictions<a class="anchor-link" href="#2.-Image-Predictions">&#182;</a></h3><ol>
+<h3 id="2.-Image-Predictions">2. Image Predictions<a class="anchor-link" href="#2.-Image-Predictions">&#182;</a></h3><p><strong>Quality Issue</strong></p>
+<ol>
 <li>Data type for the <code>tweet_id</code> column is integer, instead of string (object). [see <em>assessment 2.2</em>]</li>
+</ol>
+<p><strong>Tidiness Issue</strong></p>
+<ol>
 <li>Each set of three columns listed below are shown as column headers although these are not variable names. [see <em>assessment 2.1</em>]<ul>
 <li><code>p1</code>, <code>p2</code>, <code>p3</code>: 1st, 2nd, and 3rd predictions of a dog's breed</li>
 <li><code>p1_conf</code>, <code>p2_conf</code>, <code>p3_conf</code>: confidence in the 1st, 2nd, and 3rd predictions of a dog's breed</li>
@@ -22069,7 +22146,7 @@ space
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 2.1</span>
@@ -22086,7 +22163,7 @@ space
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -22125,78 +22202,78 @@ space
   </thead>
   <tbody>
     <tr>
-      <th>684</th>
-      <td>683852578183077888</td>
-      <td>https://pbs.twimg.com/media/CX2ISqSWYAAEtCF.jpg</td>
+      <th>1894</th>
+      <td>849776966551130114</td>
+      <td>https://pbs.twimg.com/media/C8sDpDWWsAE5P08.jpg</td>
+      <td>2</td>
+      <td>Chihuahua</td>
+      <td>0.292092</td>
+      <td>True</td>
+      <td>toy_terrier</td>
+      <td>0.136852</td>
+      <td>True</td>
+      <td>bonnet</td>
+      <td>0.103111</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1644</th>
+      <td>808106460588765185</td>
+      <td>https://pbs.twimg.com/media/Czb4iFRXgAIUMiN.jpg</td>
       <td>1</td>
-      <td>toy_poodle</td>
-      <td>0.551352</td>
+      <td>golden_retriever</td>
+      <td>0.426183</td>
       <td>True</td>
-      <td>teddy</td>
-      <td>0.180678</td>
-      <td>False</td>
-      <td>miniature_poodle</td>
-      <td>0.164095</td>
+      <td>Labrador_retriever</td>
+      <td>0.257447</td>
       <td>True</td>
-    </tr>
-    <tr>
-      <th>193</th>
-      <td>669571471778410496</td>
-      <td>https://pbs.twimg.com/media/CUrLsI-UsAALfUL.jpg</td>
-      <td>1</td>
-      <td>minivan</td>
-      <td>0.873488</td>
-      <td>False</td>
-      <td>pickup</td>
-      <td>0.041259</td>
-      <td>False</td>
-      <td>beach_wagon</td>
-      <td>0.015400</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>1464</th>
-      <td>778408200802557953</td>
-      <td>https://pbs.twimg.com/media/Cs12ICuWAAECNRy.jpg</td>
-      <td>3</td>
-      <td>Pembroke</td>
-      <td>0.848362</td>
-      <td>True</td>
-      <td>Cardigan</td>
-      <td>0.108124</td>
-      <td>True</td>
-      <td>beagle</td>
-      <td>0.011942</td>
+      <td>Great_Pyrenees</td>
+      <td>0.126482</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>370</th>
-      <td>672975131468300288</td>
-      <td>https://pbs.twimg.com/media/CVbjRSIWsAElw2s.jpg</td>
+      <th>746</th>
+      <td>687664829264453632</td>
+      <td>https://pbs.twimg.com/media/CYsTg1XUsAEPjxE.jpg</td>
       <td>1</td>
       <td>pug</td>
-      <td>0.836421</td>
-      <td>True</td>
-      <td>Brabancon_griffon</td>
-      <td>0.044668</td>
+      <td>0.957365</td>
       <td>True</td>
       <td>French_bulldog</td>
-      <td>0.036570</td>
+      <td>0.038559</td>
+      <td>True</td>
+      <td>toy_poodle</td>
+      <td>0.000667</td>
       <td>True</td>
     </tr>
     <tr>
-      <th>1951</th>
-      <td>863432100342583297</td>
-      <td>https://pbs.twimg.com/media/C_uG6eAUAAAvMvR.jpg</td>
+      <th>1637</th>
+      <td>806542213899489280</td>
+      <td>https://pbs.twimg.com/media/CzFp3FNW8AAfvV8.jpg</td>
       <td>1</td>
-      <td>Staffordshire_bullterrier</td>
-      <td>0.690517</td>
+      <td>vizsla</td>
+      <td>0.938617</td>
       <td>True</td>
+      <td>Brittany_spaniel</td>
+      <td>0.036739</td>
+      <td>True</td>
+      <td>Chesapeake_Bay_retriever</td>
+      <td>0.003971</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>977</th>
+      <td>707038192327901184</td>
+      <td>https://pbs.twimg.com/media/Cc_ney1W4AANuY3.jpg</td>
+      <td>1</td>
+      <td>pug</td>
+      <td>0.642426</td>
+      <td>True</td>
+      <td>llama</td>
+      <td>0.057306</td>
+      <td>False</td>
       <td>French_bulldog</td>
-      <td>0.103360</td>
-      <td>True</td>
-      <td>beagle</td>
-      <td>0.079489</td>
+      <td>0.054186</td>
       <td>True</td>
     </tr>
   </tbody>
@@ -22212,7 +22289,7 @@ space
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 2.2</span>
@@ -22261,7 +22338,8 @@ memory usage: 152.1+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Additional-Tweet-Data">3. Additional Tweet Data<a class="anchor-link" href="#3.-Additional-Tweet-Data">&#182;</a></h3><ol>
+<h3 id="3.-Additional-Tweet-Data">3. Additional Tweet Data<a class="anchor-link" href="#3.-Additional-Tweet-Data">&#182;</a></h3><p><strong>Quality Issues</strong></p>
+<ol>
 <li>Unlike the two previous datasets, the name of the column for tweet IDs in this dataset is <code>id</code> instead of <code>tweet_id</code>. [see <em>assessments 3.1 and 3.2</em>]</li>
 <li>Data type for the <code>id</code> column is integer, instead of string (object). [see <em>assessment 3.2</em>]</li>
 </ol>
@@ -22271,7 +22349,7 @@ memory usage: 152.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 3.1</span>
@@ -22288,7 +22366,7 @@ memory usage: 152.1+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -22318,34 +22396,34 @@ memory usage: 152.1+ KB
   </thead>
   <tbody>
     <tr>
-      <th>341</th>
-      <td>831322785565769729</td>
-      <td>1638</td>
-      <td>9634</td>
+      <th>1259</th>
+      <td>709179584944730112</td>
+      <td>698</td>
+      <td>2077</td>
     </tr>
     <tr>
-      <th>2307</th>
-      <td>666421158376562688</td>
-      <td>111</td>
-      <td>310</td>
+      <th>1935</th>
+      <td>673662677122719744</td>
+      <td>367</td>
+      <td>1266</td>
     </tr>
     <tr>
-      <th>461</th>
-      <td>816450570814898180</td>
-      <td>8784</td>
-      <td>32254</td>
+      <th>315</th>
+      <td>833863086058651648</td>
+      <td>2550</td>
+      <td>13966</td>
     </tr>
     <tr>
-      <th>970</th>
-      <td>749064354620928000</td>
-      <td>1612</td>
-      <td>4989</td>
+      <th>586</th>
+      <td>798682547630837760</td>
+      <td>5116</td>
+      <td>0</td>
     </tr>
     <tr>
-      <th>1470</th>
-      <td>693109034023534592</td>
-      <td>648</td>
-      <td>1784</td>
+      <th>1432</th>
+      <td>696405997980676096</td>
+      <td>1203</td>
+      <td>3337</td>
     </tr>
   </tbody>
 </table>
@@ -22360,7 +22438,7 @@ memory usage: 152.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assessment 3.2</span>
@@ -22382,11 +22460,11 @@ memory usage: 152.1+ KB
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 2339 entries, 0 to 2338
+RangeIndex: 2338 entries, 0 to 2337
 Data columns (total 3 columns):
-id                2339 non-null int64
-retweet_count     2339 non-null int64
-favorite_count    2339 non-null int64
+id                2338 non-null int64
+retweet_count     2338 non-null int64
+favorite_count    2338 non-null int64
 dtypes: int64(3)
 memory usage: 54.9 KB
 </pre>
@@ -22416,7 +22494,8 @@ memory usage: 54.9 KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Enhanced-Twitter-Archive">1. Enhanced Twitter Archive<a class="anchor-link" href="#1.-Enhanced-Twitter-Archive">&#182;</a></h3><h4 id="1.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">1.1 Data type for the <code>tweet_id</code> column is integer, instead of string (object).<a class="anchor-link" href="#1.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">&#182;</a></h4><p><strong>1.1.1 Define</strong></p>
+<h3 id="1.-Enhanced-Twitter-Archive">1. Enhanced Twitter Archive<a class="anchor-link" href="#1.-Enhanced-Twitter-Archive">&#182;</a></h3><p><strong>Quality Issues</strong></p>
+<h4 id="1.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">1.1 Data type for the <code>tweet_id</code> column is integer, instead of string (object).<a class="anchor-link" href="#1.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">&#182;</a></h4><p><strong>1.1.1 Define</strong></p>
 <p>Convert the data type of the <code>tweet_id</code> column from integer to string (object).</p>
 
 </div>
@@ -22432,7 +22511,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">tweet_id</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">tweet_id</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span> <span class="o">=</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
@@ -22454,7 +22533,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">tweet_id</span><span class="o">.</span><span class="n">dtype</span>
@@ -22470,7 +22549,7 @@ memory usage: 54.9 KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -22504,7 +22583,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;in_reply_to_status_id&#39;</span><span class="p">,</span> <span class="s1">&#39;in_reply_to_user_id&#39;</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -22526,7 +22605,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">columns</span>
@@ -22542,7 +22621,7 @@ memory usage: 54.9 KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -22580,7 +22659,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">arg</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
@@ -22602,7 +22681,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">dtype</span>
@@ -22618,7 +22697,7 @@ memory usage: 54.9 KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -22655,7 +22734,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># empty dictionary for storing mapping of sources</span>
@@ -22674,7 +22753,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># map sources to the source names defined in the above dictionary</span>
@@ -22692,7 +22771,7 @@ memory usage: 54.9 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert data type to category</span>
@@ -22715,7 +22794,7 @@ After the values of the <code>source</code> column were shortened by removing th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># unique values for source column</span>
@@ -22751,7 +22830,7 @@ After the values of the <code>source</code> column were shortened by removing th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">dtype</span>
@@ -22767,7 +22846,7 @@ After the values of the <code>source</code> column were shortened by removing th
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -22787,9 +22866,9 @@ After the values of the <code>source</code> column were shortened by removing th
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.5-181-tweets-were-created-by-re-tweeting-existing-tweets.">1.5 181 tweets were created by re-tweeting existing tweets.<a class="anchor-link" href="#1.5-181-tweets-were-created-by-re-tweeting-existing-tweets.">&#182;</a></h4><p><strong>1.5.1 Define</strong></p>
+<h4 id="1.5-181-tweets-were-created-by-re-tweeting-existing-tweets.-All-retweets-have-non-NaN-values,-and-all-original-tweets-have-NaN-for-the-three-columns-retweeted_status_id,-retweeted_status_user_id,-retweeted_status_timestamp.">1.5 181 tweets were created by re-tweeting existing tweets. All retweets have non-<code>NaN</code> values, and all original tweets have <code>NaN</code> for the three columns <code>retweeted_status_id</code>, <code>retweeted_status_user_id</code>, <code>retweeted_status_timestamp</code>.<a class="anchor-link" href="#1.5-181-tweets-were-created-by-re-tweeting-existing-tweets.-All-retweets-have-non-NaN-values,-and-all-original-tweets-have-NaN-for-the-three-columns-retweeted_status_id,-retweeted_status_user_id,-retweeted_status_timestamp.">&#182;</a></h4><p><strong>1.5.1 Define</strong></p>
 <ol>
-<li>Add a new column <code>retweet</code> with the value <code>True</code> for retweets and the value <code>False</code> for non-retweets.</li>
+<li>Remove all retweets by dropping rows with non-<code>NaN</code> values for <code>retweeted_status_id</code>(, <code>retweeted_status_user_id</code>, or <code>retweeted_status_timestamp</code>).</li>
 <li>Drop all three columns, <code>retweeted_status_id</code>, <code>retweeted_status_user_id</code>, and <code>retweeted_status_timestamp</code>.</li>
 </ol>
 
@@ -22806,11 +22885,17 @@ After the values of the <code>source</code> column were shortened by removing th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add a new column retweet</span>
-<span class="n">df_archive_clean</span><span class="p">[</span><span class="s1">&#39;retweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">retweeted_status_id</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># indices of original tweets</span>
+<span class="n">ind</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="p">[[</span><span class="s1">&#39;retweeted_status_id&#39;</span><span class="p">,</span> <span class="s1">&#39;retweeted_status_user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;retweeted_status_timestamp&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># keep only original tweets</span>
+<span class="n">df_archive_clean</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ind</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="c1"># reset index</span>
+<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -22820,7 +22905,7 @@ After the values of the <code>source</code> column were shortened by removing th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># remove three columns</span>
@@ -22837,7 +22922,7 @@ After the values of the <code>source</code> column were shortened by removing th
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>1.5.3 Test</strong></p>
 <ul>
-<li>The <code>retweet</code> column shows 181 retweets and 2175 non-retweets.</li>
+<li>The dataset has 2175 rows, also the expected number of original tweets.</li>
 <li>The three columns, <code>retweeted_status_id</code>, <code>retweeted_status_user_id</code>, and <code>retweeted_status_timestamp</code>, were successfully removed.</li>
 </ul>
 
@@ -22846,11 +22931,10 @@ After the values of the <code>source</code> column were shortened by removing th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># numbers of retweets and non-retweets</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">retweet</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -22863,54 +22947,29 @@ After the values of the <code>source</code> column were shortened by removing th
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[41]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False    2175
-True      181
-Name: retweet, dtype: int64</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 2175 entries, 0 to 2174
+Data columns (total 12 columns):
+tweet_id              2175 non-null object
+timestamp             2175 non-null datetime64[ns, UTC]
+source                2175 non-null category
+text                  2175 non-null object
+expanded_urls         2117 non-null object
+rating_numerator      2175 non-null int64
+rating_denominator    2175 non-null int64
+name                  2175 non-null object
+doggo                 2175 non-null object
+floofer               2175 non-null object
+pupper                2175 non-null object
+puppo                 2175 non-null object
+dtypes: category(1), datetime64[ns, UTC](1), int64(2), object(8)
+memory usage: 189.3+ KB
+</pre>
 </div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># remaining columns</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[42]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Index([&#39;tweet_id&#39;, &#39;timestamp&#39;, &#39;source&#39;, &#39;text&#39;, &#39;expanded_urls&#39;,
-       &#39;rating_numerator&#39;, &#39;rating_denominator&#39;, &#39;name&#39;, &#39;doggo&#39;, &#39;floofer&#39;,
-       &#39;pupper&#39;, &#39;puppo&#39;, &#39;retweet&#39;],
-      dtype=&#39;object&#39;)</pre>
-</div>
-
 </div>
 
 </div>
@@ -22936,7 +22995,7 @@ Name: retweet, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;expanded_urls&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -22958,7 +23017,7 @@ Name: retweet, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">columns</span>
@@ -22974,15 +23033,14 @@ Name: retweet, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>Index([&#39;tweet_id&#39;, &#39;timestamp&#39;, &#39;source&#39;, &#39;text&#39;, &#39;rating_numerator&#39;,
-       &#39;rating_denominator&#39;, &#39;name&#39;, &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;,
-       &#39;retweet&#39;],
+       &#39;rating_denominator&#39;, &#39;name&#39;, &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;],
       dtype=&#39;object&#39;)</pre>
 </div>
 
@@ -23019,7 +23077,27 @@ Name: retweet, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># re-create df_ratings from assessment 1.5.2 because indices were updated during previous cleaning operations</span>
+
+<span class="c1"># sub-dataframe for rows with rating_denominator values besides 10 </span>
+<span class="n">df_ratings</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;rating_denominator != 10&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;rating_numerator&#39;</span><span class="p">,</span> <span class="s1">&#39;rating_denominator&#39;</span><span class="p">]]</span>
+
+<span class="c1"># extract rating, if any, of format digit(s)/10</span>
+<span class="n">rating_format</span> <span class="o">=</span> <span class="s1">&#39;(\d+/10)&#39;</span>
+<span class="n">df_ratings</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_ratings</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="n">rating_format</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert NaN&#39;s to 0/0</span>
@@ -23046,7 +23124,7 @@ Name: retweet, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">rating_denominator</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="p">(</span><span class="n">df_ratings</span><span class="o">.</span><span class="n">rating</span> <span class="o">==</span> <span class="s1">&#39;0/0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -23062,7 +23140,7 @@ Name: retweet, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -23096,10 +23174,31 @@ Name: retweet, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_names</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_names</span><span class="p">[</span><span class="s1">&#39;new_name&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># re-create df_names from assessment 1.6.4 because indices were updated during previous cleaning operations</span>
+
+<span class="c1"># sub-dataframe of rows with dog names which are oridinary vocabularies</span>
+<span class="n">df_names</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;name in @error_name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">]]</span>
+
+<span class="c1"># extract dog-name, if any, following &#39;named&#39; or &#39;name is&#39;</span>
+<span class="n">name_format</span> <span class="o">=</span> <span class="s1">&#39;(?:named|name is)\s([A-Z][a-z]+)&#39;</span>
+<span class="n">df_names</span><span class="p">[</span><span class="s1">&#39;new_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_names</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="n">name_format</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># replace erroneous names</span>
+<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_names</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_names</span><span class="p">[</span><span class="s1">&#39;new_name&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -23118,7 +23217,7 @@ Name: retweet, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_names</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df_names</span><span class="o">.</span><span class="n">new_name</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -23134,13 +23233,13 @@ Name: retweet, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[51]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(109, 109)</pre>
+<pre>(104, 104)</pre>
 </div>
 
 </div>
@@ -23168,7 +23267,7 @@ Name: retweet, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># columns to be corrected</span>
@@ -23193,11 +23292,11 @@ Name: retweet, dtype: int64</pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>name 745
-doggo 2259
-floofer 2346
-pupper 2099
-puppo 2326
+<pre>name 680
+doggo 2088
+floofer 2165
+pupper 1941
+puppo 2150
 </pre>
 </div>
 </div>
@@ -23208,7 +23307,7 @@ puppo 2326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># replace None with NaN</span>
@@ -23232,7 +23331,7 @@ puppo 2326
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># number of instances of None remaining in each column</span>
@@ -23270,9 +23369,18 @@ puppo 0
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="1.10-Four-possible-dog-&quot;stages&quot;,-doggo,-floofer,-pupper,-and-puppo,-are-shown-as-column-headers-although-these-&quot;stages&quot;-are-not-variable-names.">1.10 Four possible dog "stages", doggo, floofer, pupper, and puppo, are shown as column headers although these "stages" are not variable names.<a class="anchor-link" href="#1.10-Four-possible-dog-&quot;stages&quot;,-doggo,-floofer,-pupper,-and-puppo,-are-shown-as-column-headers-although-these-&quot;stages&quot;-are-not-variable-names.">&#182;</a></h4><p><strong>1.10.1.1 Define</strong></p>
+<h4 id="1.10-14-Tweets-have-multiple-dog-stages.">1.10 14 Tweets have multiple dog stages.<a class="anchor-link" href="#1.10-14-Tweets-have-multiple-dog-stages.">&#182;</a></h4><p>This issue was resolved by addressing the tidiness issue below.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Tidiness Issue</strong></p>
+<h4 id="1.-Four-possible-dog-&quot;stages&quot;,-doggo,-floofer,-pupper,-and-puppo,-are-shown-as-column-headers-although-these-&quot;stages&quot;-are-not-variable-names.">1. Four possible dog "stages", doggo, floofer, pupper, and puppo, are shown as column headers although these "stages" are not variable names.<a class="anchor-link" href="#1.-Four-possible-dog-&quot;stages&quot;,-doggo,-floofer,-pupper,-and-puppo,-are-shown-as-column-headers-although-these-&quot;stages&quot;-are-not-variable-names.">&#182;</a></h4><p><strong>1.1 Define</strong></p>
 <ul>
-<li>Extract the stage from each row across the four columns <code>doggo</code>, <code>floofer</code>, <code>pupper</code>, and <code>puppo</code>.</li>
+<li>Extract and join the stage from each row across the four columns <code>doggo</code>, <code>floofer</code>, <code>pupper</code>, and <code>puppo</code>.</li>
 <li>Assign the stage to a new column labeled as <code>stage</code>.</li>
 <li>Drop the four columns <code>doggo</code>, <code>floofer</code>, <code>pupper</code>, and <code>puppo</code>.</li>
 </ul>
@@ -23283,58 +23391,20 @@ puppo 0
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.10.1.2 Code</strong></p>
+<p><strong>1.2 Code</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># number of instances of each stage</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[52]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>doggo       97
-floofer     10
-pupper     257
-puppo       30
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sub-dataframe of columns representing stages</span>
 <span class="n">df_stages</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">]]</span>
 
-<span class="c1"># extract stage from the four columns in each row</span>
+<span class="c1"># join stage from the four columns in each row</span>
 <span class="n">df_archive_clean</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_stages</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">dropna</span><span class="p">()),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># replace empty values with NaN</span>
@@ -23352,14 +23422,10 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.10.1.3 Test</strong></p>
+<p><strong>1.3 Test</strong></p>
 <ul>
 <li>The four columns <code>doggo</code>, <code>floofer</code>, <code>pupper</code>, and <code>puppo</code> were successfully removed from the dataframe.</li>
-<li>For 14 tweets, more than one stage were observed.<ul>
-<li>Some instances of this case occurred because the image appears to include pictures of more than one dog.</li>
-<li>In other instances, the stages were not specifically referring to a dog in that the image was not a picture of a dog.</li>
-</ul>
-</li>
+<li>The new column <code>stage</code> successfully captured both single stages and multiple stages. Number of tweets with multiple stages decreased from 14 to 12 because the cleaned dataset now includes original tweets only.</li>
 </ul>
 
 </div>
@@ -23367,7 +23433,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># remaining columns</span>
@@ -23384,188 +23450,15 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[56]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>Index([&#39;tweet_id&#39;, &#39;timestamp&#39;, &#39;source&#39;, &#39;text&#39;, &#39;rating_numerator&#39;,
-       &#39;rating_denominator&#39;, &#39;name&#39;, &#39;retweet&#39;, &#39;stage&#39;],
+       &#39;rating_denominator&#39;, &#39;name&#39;, &#39;stage&#39;],
       dtype=&#39;object&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># number of instances of each stage</span>
-<span class="n">df_archive_clean</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[55]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>pupper           245
-doggo             83
-puppo             29
-doggo,pupper      12
-floofer            9
-doggo,floofer      1
-doggo,puppo        1
-Name: stage, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list-object containing unique stages which include multiple stages</span>
-<span class="n">multiple_stages</span> <span class="o">=</span> <span class="p">[</span><span class="n">stage_</span> <span class="k">for</span> <span class="n">stage_</span> <span class="ow">in</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">stage</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">stage_</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="c1"># compare stages mentioned in the tweet with the extracted stages</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;stage in @multiple_stages&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;stage&#39;</span><span class="p">]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[56]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>text</th>
-      <th>stage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>191</th>
-      <td>Here's a puppo participating in the #ScienceMarch. Cleverly disguising her own doggo agenda. 13/10 would keep the planet habitable for https://t.co/cMhq16isel</td>
-      <td>doggo,puppo</td>
-    </tr>
-    <tr>
-      <th>200</th>
-      <td>At first I thought this was a shy doggo, but it's actually a Rare Canadian Floofer Owl. Amateurs would confuse the two. 11/10 only send dogs https://t.co/TXdT3tmuYk</td>
-      <td>doggo,floofer</td>
-    </tr>
-    <tr>
-      <th>460</th>
-      <td>This is Dido. She's playing the lead role in "Pupper Stops to Catch Snow Before Resuming Shadow Box with Dried Apple." 13/10 (IG: didodoggo) https://t.co/m7isZrOBX7</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>531</th>
-      <td>Here we have Burke (pupper) and Dexter (doggo). Pupper wants to be exactly like doggo. Both 12/10 would pet at same time https://t.co/ANBpEYHaho</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>565</th>
-      <td>Like doggo, like pupper version 2. Both 11/10 https://t.co/9IxWAXFqze</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>575</th>
-      <td>This is Bones. He's being haunted by another doggo of roughly the same size. 12/10 deep breaths pupper everything's fine https://t.co/55Dqe0SJNj</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>705</th>
-      <td>This is Pinot. He's a sophisticated doggo. You can tell by the hat. Also pointier than your average pupper. Still 10/10 would pet cautiously https://t.co/f2wmLZTPHd</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>733</th>
-      <td>Pupper butt 1, Doggo 0. Both 12/10 https://t.co/WQvcPEpH2u</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>778</th>
-      <td>RT @dog_rates: Like father (doggo), like son (pupper). Both 12/10 https://t.co/pG2inLaOda</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>822</th>
-      <td>RT @dog_rates: This is just downright precious af. 12/10 for both pupper and doggo https://t.co/o5J479bZUC</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>889</th>
-      <td>Meet Maggie &amp;amp; Lila. Maggie is the doggo, Lila is the pupper. They are sisters. Both 12/10 would pet at the same time https://t.co/MYwR4DQKll</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>956</th>
-      <td>Please stop sending it pictures that don't even have a doggo or pupper in them. Churlish af. 5/10 neat couch tho https://t.co/u2c9c7qSg8</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>1063</th>
-      <td>This is just downright precious af. 12/10 for both pupper and doggo https://t.co/o5J479bZUC</td>
-      <td>doggo,pupper</td>
-    </tr>
-    <tr>
-      <th>1113</th>
-      <td>Like father (doggo), like son (pupper). Both 12/10 https://t.co/pG2inLaOda</td>
-      <td>doggo,pupper</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 </div>
 
 </div>
@@ -23579,7 +23472,8 @@ Name: stage, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">stage</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># number of instances of each stage</span>
+<span class="n">df_archive_clean</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -23598,91 +23492,13 @@ Name: stage, dtype: int64</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([nan, &#39;doggo&#39;, &#39;puppo&#39;, &#39;pupper&#39;, &#39;floofer&#39;, &#39;doggo,puppo&#39;,
-       &#39;doggo,floofer&#39;, &#39;doggo,pupper&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.10.2.1 Define</strong></p>
-<ul>
-<li>Replace all instances of multiple stages with <code>NaN</code> due to the multiple variations of this case.</li>
-<li>Convert the data type of the <code>stage</code> column from string to category.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.10.2.2 Code</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># replace multiple stages with NaN</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_archive_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;stage in @multiple_stages&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;stage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-
-<span class="c1"># convert data type to category</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">stage</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="o">.</span><span class="n">stage</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span> <span class="o">=</span> <span class="s1">&#39;category&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>1.10.2.3 Test</strong></p>
-<p>The <code>stage</code> column was successfully converted to a categorical variable with four possible values: <code>pupper</code>, <code>doggo</code>, <code>puppo</code>, and <code>floofer</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># number of instances of each stage</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">stage</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[59]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>pupper     245
-doggo      83 
-puppo      29 
-floofer    9  
+<pre>pupper           224
+doggo             75
+puppo             24
+doggo,pupper      10
+floofer            9
+doggo,floofer      1
+doggo,puppo        1
 Name: stage, dtype: int64</pre>
 </div>
 
@@ -23692,44 +23508,11 @@ Name: stage, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data type of stage column</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">stage</span><span class="o">.</span><span class="n">dtype</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[60]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>CategoricalDtype(categories=[&#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;], ordered=False)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.-Image-Predictions">2. Image Predictions<a class="anchor-link" href="#2.-Image-Predictions">&#182;</a></h3><h4 id="2.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">2.1 Data type for the <code>tweet_id</code> column is integer, instead of string (object).<a class="anchor-link" href="#2.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">&#182;</a></h4><p><strong>2.1.1 Define</strong></p>
+<h3 id="2.-Image-Predictions">2. Image Predictions<a class="anchor-link" href="#2.-Image-Predictions">&#182;</a></h3><p><strong>Quality Issue</strong></p>
+<h4 id="2.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">2.1 Data type for the <code>tweet_id</code> column is integer, instead of string (object).<a class="anchor-link" href="#2.1-Data-type-for-the-tweet_id-column-is-integer,-instead-of-string-(object).">&#182;</a></h4><p><strong>2.1.1 Define</strong></p>
 <p>Convert the data type of the <code>tweet_id</code> column from integer to string (object).</p>
 
 </div>
@@ -23745,7 +23528,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_image_clean</span><span class="o">.</span><span class="n">tweet_id</span> <span class="o">=</span> <span class="n">df_image_clean</span><span class="o">.</span><span class="n">tweet_id</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span> <span class="o">=</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
@@ -23767,7 +23550,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_image_clean</span><span class="o">.</span><span class="n">tweet_id</span><span class="o">.</span><span class="n">dtype</span>
@@ -23783,7 +23566,7 @@ Name: stage, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[62]:</div>
+    <div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -23801,7 +23584,8 @@ Name: stage, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="2.2-Three-sets-of-three-columns-are-shown-as-column-headers-although-these-are-not-variable-names.">2.2 Three sets of three columns are shown as column headers although these are not variable names.<a class="anchor-link" href="#2.2-Three-sets-of-three-columns-are-shown-as-column-headers-although-these-are-not-variable-names.">&#182;</a></h4><p><strong>2.2.1 Define</strong></p>
+<p><strong>Tidiness Issue</strong></p>
+<h4 id="2.1-Three-sets-of-three-columns-are-shown-as-column-headers-although-these-are-not-variable-names.">2.1 Three sets of three columns are shown as column headers although these are not variable names.<a class="anchor-link" href="#2.1-Three-sets-of-three-columns-are-shown-as-column-headers-although-these-are-not-variable-names.">&#182;</a></h4><p><strong>2.1.1 Define</strong></p>
 <ul>
 <li>For each set of the three columns, unpivot the three columns, rank the predictions under a new variable <code>prediction</code>, and assign the values under a new value column.<ul>
 <li>Assign the values of <code>p1</code>, <code>p2</code>, <code>p3</code> to a new column <code>breed</code>.</li>
@@ -23818,14 +23602,14 @@ Name: stage, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>2.2.2 Code</strong></p>
+<p><strong>2.1.2 Code</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># unpivot the dataframe for each set of three columns</span>
@@ -23850,7 +23634,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># reconcile the ranks for predictions to p1, p2, and p3 for all three sub-dataframes</span>
@@ -23865,7 +23649,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># merge first two sub-dataframes</span>
@@ -23892,7 +23676,7 @@ Name: stage, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>2.2.3 Test</strong></p>
+<p><strong>2.1.3 Test</strong></p>
 <p>Three sets of three columns were successfully tidied from a wide format to a long format.</p>
 
 </div>
@@ -23900,7 +23684,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_image_clean</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -23916,7 +23700,7 @@ Name: stage, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[66]:</div>
+    <div class="prompt output_prompt">Out[63]:</div>
 
 
 
@@ -24163,7 +23947,8 @@ Name: stage, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.-Additional-Tweet-Data">3. Additional Tweet Data<a class="anchor-link" href="#3.-Additional-Tweet-Data">&#182;</a></h3><h4 id="3.1-Data-type-for-the-id-column-is-integer,-instead-of-string-(object).">3.1 Data type for the <code>id</code> column is integer, instead of string (object).<a class="anchor-link" href="#3.1-Data-type-for-the-id-column-is-integer,-instead-of-string-(object).">&#182;</a></h4><p><strong>3.1.1 Define</strong></p>
+<h3 id="3.-Additional-Tweet-Data">3. Additional Tweet Data<a class="anchor-link" href="#3.-Additional-Tweet-Data">&#182;</a></h3><p><strong>Quality Issues</strong></p>
+<h4 id="3.1-Data-type-for-the-id-column-is-integer,-instead-of-string-(object).">3.1 Data type for the <code>id</code> column is integer, instead of string (object).<a class="anchor-link" href="#3.1-Data-type-for-the-id-column-is-integer,-instead-of-string-(object).">&#182;</a></h4><p><strong>3.1.1 Define</strong></p>
 <p>Convert the data type of the <code>id</code> column from integer to string (object).</p>
 
 </div>
@@ -24179,7 +23964,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_json_clean</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">df_json_clean</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span> <span class="o">=</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
@@ -24209,7 +23994,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_json_clean</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">dtype</span>
@@ -24225,7 +24010,7 @@ Name: stage, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[68]:</div>
+    <div class="prompt output_prompt">Out[65]:</div>
 
 
 
@@ -24259,7 +24044,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_json_clean</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -24281,7 +24066,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_json_clean</span><span class="o">.</span><span class="n">columns</span>
@@ -24297,7 +24082,7 @@ Name: stage, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[70]:</div>
+    <div class="prompt output_prompt">Out[67]:</div>
 
 
 
@@ -24331,7 +24116,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># combine two datasets</span>
@@ -24349,14 +24134,14 @@ Name: stage, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>4.1.3 Test</strong></p>
-<p>The two dataframe objects <code>df_archive_clean</code> and <code>df_json_clean</code> were successfully joined by the Tweet IDs shared between the two. The merged dataset has the same number of rows as <code>df_json_clean</code>.</p>
+<p>The two dataframe objects <code>df_archive_clean</code> and <code>df_json_clean</code> were successfully joined by the Tweet IDs shared between the two. Note that the combined dataset has fewer number of rows than those of the individual datasets.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_master</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -24372,7 +24157,7 @@ Name: stage, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[72]:</div>
+    <div class="prompt output_prompt">Out[69]:</div>
 
 
 
@@ -24402,7 +24187,6 @@ Name: stage, dtype: int64</pre>
       <th>rating_numerator</th>
       <th>rating_denominator</th>
       <th>name</th>
-      <th>retweet</th>
       <th>stage</th>
       <th>retweet_count</th>
       <th>favorite_count</th>
@@ -24414,70 +24198,65 @@ Name: stage, dtype: int64</pre>
       <td>892420643555336193</td>
       <td>2017-08-01 16:23:56+00:00</td>
       <td>Twitter for iPhone</td>
-      <td>This is Phineas. He's a mystical boy. Only ever appears in the hole of a donut. 13/10 https://t.co/MgUWQ76dJU</td>
+      <td>This is Phineas. He's a mystical boy. Only eve...</td>
       <td>13</td>
       <td>10</td>
       <td>Phineas</td>
-      <td>False</td>
       <td>NaN</td>
-      <td>8219</td>
-      <td>37722</td>
+      <td>8212</td>
+      <td>37667</td>
     </tr>
     <tr>
       <th>1</th>
       <td>892177421306343426</td>
       <td>2017-08-01 00:17:27+00:00</td>
       <td>Twitter for iPhone</td>
-      <td>This is Tilly. She's just checking pup on you. Hopes you're doing ok. If not, she's available for pats, snugs, boops, the whole bit. 13/10 https://t.co/0Xxu71qeIV</td>
+      <td>This is Tilly. She's just checking pup on you....</td>
       <td>13</td>
       <td>10</td>
       <td>Tilly</td>
-      <td>False</td>
       <td>NaN</td>
-      <td>6077</td>
-      <td>32385</td>
+      <td>6072</td>
+      <td>32353</td>
     </tr>
     <tr>
       <th>2</th>
       <td>891815181378084864</td>
       <td>2017-07-31 00:18:03+00:00</td>
       <td>Twitter for iPhone</td>
-      <td>This is Archie. He is a rare Norwegian Pouncing Corgo. Lives in the tall grass. You never know when one may strike. 12/10 https://t.co/wUnZnhtVJB</td>
+      <td>This is Archie. He is a rare Norwegian Pouncin...</td>
       <td>12</td>
       <td>10</td>
       <td>Archie</td>
-      <td>False</td>
       <td>NaN</td>
-      <td>4020</td>
-      <td>24391</td>
+      <td>4015</td>
+      <td>24372</td>
     </tr>
     <tr>
       <th>3</th>
       <td>891689557279858688</td>
       <td>2017-07-30 15:58:51+00:00</td>
       <td>Twitter for iPhone</td>
-      <td>This is Darla. She commenced a snooze mid meal. 13/10 happens to the best of us https://t.co/tD36da7qLQ</td>
+      <td>This is Darla. She commenced a snooze mid meal...</td>
       <td>13</td>
       <td>10</td>
       <td>Darla</td>
-      <td>False</td>
       <td>NaN</td>
-      <td>8373</td>
-      <td>41030</td>
+      <td>8368</td>
+      <td>40973</td>
     </tr>
     <tr>
       <th>4</th>
       <td>891327558926688256</td>
       <td>2017-07-29 16:00:24+00:00</td>
       <td>Twitter for iPhone</td>
-      <td>This is Franklin. He would like you to stop calling him "cute." He is a very fierce shark and should be respected as such. 12/10 #BarkWeek https://t.co/AtUZn91f7f</td>
+      <td>This is Franklin. He would like you to stop ca...</td>
       <td>12</td>
       <td>10</td>
       <td>Franklin</td>
-      <td>False</td>
       <td>NaN</td>
-      <td>9079</td>
-      <td>39227</td>
+      <td>9067</td>
+      <td>39184</td>
     </tr>
   </tbody>
 </table>
@@ -24492,7 +24271,7 @@ Name: stage, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># total number of rows in each individual dataset and the merged dataset</span>
@@ -24509,13 +24288,13 @@ Name: stage, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[73]:</div>
+    <div class="prompt output_prompt">Out[70]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(2356, 2339, 2339)</pre>
+<pre>(2175, 2338, 2171)</pre>
 </div>
 
 </div>
@@ -24523,25 +24302,14 @@ Name: stage, dtype: int64</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Having tested and verified that the merge was successfully completed, store both datasets <code>df_archive_clean</code> and <code>df_archive_master</code> as <code>.csv</code> files.</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># clean twitter archive data w/out retweet and favorite counts</span>
-<span class="n">df_archive_clean</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/twitter_archive_clean.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-
-<span class="c1"># clean twitter archive data w/ retweet and favorite counts</span>
-<span class="n">df_archive_master</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/twitter_archive_master.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># array of unique tweet ids after merging archive data and json data</span>
+<span class="n">arr1</span> <span class="o">=</span> <span class="n">df_archive_master</span><span class="o">.</span><span class="n">tweet_id</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -24552,21 +24320,305 @@ Name: stage, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="4.2-Image-Predictions">4.2 Image Predictions<a class="anchor-link" href="#4.2-Image-Predictions">&#182;</a></h4><p>Store the cleaned dataset <code>df_image_clean</code> to a separate <code>.csv</code> file. Unlike the previous two datasets, this dataset was not merged because</p>
-<ul>
-<li>this dataset by itself represents a unique observational unit.</li>
-<li>merging this dataset with any one of the other two datasets would duplicate rows of data in the other dataset without creating a separately unique observational unit.</li>
-</ul>
+<h4 id="4.2-Image-Predictions">4.2 Image Predictions<a class="anchor-link" href="#4.2-Image-Predictions">&#182;</a></h4><p>The cleaned dataset <code>df_image_clean</code> shares with the two datasets which were combined above the same observational unit, Tweets. Thus, the clean version of the image predictions data also needs to be combined to the merged dataset. Note that this merge would result in a dataset with multiple rows of data for each Tweet ID because the clean version of the image predictions data include multiple rows of data for each Tweet ID by levels of predictions.</p>
+<p><strong>4.2.1 Define</strong></p>
+<p>Merge the dataframe object <code>df_image_clean</code> with the combined dataframe object <code>df_archive_master</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>4.2.2 Code</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># combine two datasets</span>
+<span class="n">df_archive_master</span> <span class="o">=</span> <span class="n">df_archive_master</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">right</span> <span class="o">=</span> <span class="n">df_image_clean</span>
+                                            <span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;tweet_id&#39;</span>
+                                            <span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>4.2.3 Test</strong></p>
+<p>The clean version of the image predictions data was successfully combined with the clean version of the enhanced Twitter archive data. Note that the merged dataset now includes three rows of data for each unique Tweet ID; however, each set of three rows of data is not a duplicate in that the last six columns of this dataset which were originally from the image predictions dataset contain data on three different levels of predictions of dog breeds for each Tweet ID.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_master</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[73]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tweet_id</th>
+      <th>timestamp</th>
+      <th>source</th>
+      <th>text</th>
+      <th>rating_numerator</th>
+      <th>rating_denominator</th>
+      <th>name</th>
+      <th>stage</th>
+      <th>retweet_count</th>
+      <th>favorite_count</th>
+      <th>jpg_url</th>
+      <th>img_num</th>
+      <th>prediction</th>
+      <th>breed</th>
+      <th>confidence</th>
+      <th>dog_breed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>892420643555336193</td>
+      <td>2017-08-01 16:23:56+00:00</td>
+      <td>Twitter for iPhone</td>
+      <td>This is Phineas. He's a mystical boy. Only eve...</td>
+      <td>13</td>
+      <td>10</td>
+      <td>Phineas</td>
+      <td>NaN</td>
+      <td>8212</td>
+      <td>37667</td>
+      <td>https://pbs.twimg.com/media/DGKD1-bXoAAIAUK.jpg</td>
+      <td>1</td>
+      <td>p1</td>
+      <td>orange</td>
+      <td>0.097049</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>892420643555336193</td>
+      <td>2017-08-01 16:23:56+00:00</td>
+      <td>Twitter for iPhone</td>
+      <td>This is Phineas. He's a mystical boy. Only eve...</td>
+      <td>13</td>
+      <td>10</td>
+      <td>Phineas</td>
+      <td>NaN</td>
+      <td>8212</td>
+      <td>37667</td>
+      <td>https://pbs.twimg.com/media/DGKD1-bXoAAIAUK.jpg</td>
+      <td>1</td>
+      <td>p2</td>
+      <td>bagel</td>
+      <td>0.085851</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>892420643555336193</td>
+      <td>2017-08-01 16:23:56+00:00</td>
+      <td>Twitter for iPhone</td>
+      <td>This is Phineas. He's a mystical boy. Only eve...</td>
+      <td>13</td>
+      <td>10</td>
+      <td>Phineas</td>
+      <td>NaN</td>
+      <td>8212</td>
+      <td>37667</td>
+      <td>https://pbs.twimg.com/media/DGKD1-bXoAAIAUK.jpg</td>
+      <td>1</td>
+      <td>p3</td>
+      <td>banana</td>
+      <td>0.076110</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>892177421306343426</td>
+      <td>2017-08-01 00:17:27+00:00</td>
+      <td>Twitter for iPhone</td>
+      <td>This is Tilly. She's just checking pup on you....</td>
+      <td>13</td>
+      <td>10</td>
+      <td>Tilly</td>
+      <td>NaN</td>
+      <td>6072</td>
+      <td>32353</td>
+      <td>https://pbs.twimg.com/media/DGGmoV4XsAAUL6n.jpg</td>
+      <td>1</td>
+      <td>p1</td>
+      <td>Chihuahua</td>
+      <td>0.323581</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>892177421306343426</td>
+      <td>2017-08-01 00:17:27+00:00</td>
+      <td>Twitter for iPhone</td>
+      <td>This is Tilly. She's just checking pup on you....</td>
+      <td>13</td>
+      <td>10</td>
+      <td>Tilly</td>
+      <td>NaN</td>
+      <td>6072</td>
+      <td>32353</td>
+      <td>https://pbs.twimg.com/media/DGGmoV4XsAAUL6n.jpg</td>
+      <td>1</td>
+      <td>p2</td>
+      <td>Pekinese</td>
+      <td>0.090647</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The operations performed below provide insights into the changes in the number of unique Tweet IDs as a result of merging image predictions data with enhanced Twitter archive data. After the two datasets, each with 2171 and 2075 unique Tweet IDs, were combined, the number of unique Tweet IDs in the merged dataset was reduced to 1990, the number of unique Tweet IDs shared by both datasets which were merged. Because the merged dataset contains three rows of data for each Tweet ID, the final dataset contains a total of 5970 rows of data or three times the number of unique Tweet IDs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># array of unique tweet ids in cleaned image predictions data</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="n">df_image_clean</span><span class="o">.</span><span class="n">tweet_id</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="c1"># number of unique tweet ids in individual datasets and merged dataset</span>
+<span class="n">arr1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">arr2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">intersect1d</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[74]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(2171, 2075, 1990)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_image_clean</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/image_prediction_clean.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># total number of rows in merged dataset = number of unique tweet ids in merged dataset * 3</span>
+<span class="n">df_archive_master</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">intersect1d</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[75]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="4.3-Store-Merged-Dataset">4.3 Store Merged Dataset<a class="anchor-link" href="#4.3-Store-Merged-Dataset">&#182;</a></h4><p>Having tested and verified that the merge was successfully completed, store the merged dataset <code>df_archive_master</code> as a separate <code>.csv</code> file.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_master</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/twitter_archive_master.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -24578,10 +24630,10 @@ Name: stage, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a id='conclusion'></a></p>
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>This document covered the first section of the project, wrangling data on Tweets from <em>WeRateDogs (@dogrates)</em>. Data wrangling began with gathering three datasets. First dataset which Udacity made readily available for manual download represents cases in which datasets subject to analysis for certain projects are provided by an entity or a project manager. The last two datasets which were programmatically downloaded by using <em>Requests</em> and <em>Tweepy</em> packages represent cases in which data analysts or data scientists scrape data available online, a method which is most appropriate for reproducability and scalability.</p>
-<p>Next, these datasets were assessed for quality and tidiness issues or problems in the content and structure of the data, which  would significantly complicate the data analysis and visualization. Although the project made attempts to perform a comprehensive assessment, the assessments documented here may not be the only issues that must be addressed depending on the questions or problems of interest. In fact, potential cases in which questions or problems are not defined until the exploratory data analysis phase suggest the need to re-visit the assessments if these do not streamline the investigation of the questions and problems of interest. Also, note that assessing data not only encompasses identification of issues but covers simply understanding the content and structure of the data. <strong>Assessing Data</strong> would be even more comprehensive if comments on the basic content and structure of the three datasets were documented as well.</p>
-<p>Effective assessments of the quality and tidiness issues facilitated the next step of data wrangling, <em>cleaning data</em>. For each assessment, a step-by-step actionable plan for addressing the issue was documented, which were then translated into codes. After executing the codes, the results were tested to verify whether the operation resolved the identified issue. If the results showed another issue that would potentially affect the data analysis and visualization, then the three steps, <em>define</em>, <em>code</em>, and <em>test</em>, were repeated to address the new issue.</p>
-<p>At the end of the data wrangling phase, cleaned datasets were stored as separate files and made available for the next part of this project, <strong>Part 2: Exploratory Data Analysis (EDA) and Data Visualization</strong>. These now functional datasets are expected to facilitate the investigation and augmentation of the data to maximize the potential of the analyses and deriving insights from visualizations. However, based on the questions or problems raised in this phase of the data analysis, some steps from data wrangling may need to be repeated. If the gathered data is insufficient to address these questions or problems, then all steps from data wrangling need to be repeated. As such, data wrangling definitely defines a bulk of the data analysis and is likely iterated throughout the course of the analysis to ensure that analyzing and visualizing data to draw insights becomes possible, at the least.</p>
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>This document covered the first section of the data analysis project, wrangling data on Tweets from <em>WeRateDogs (@dogrates)</em>. Data wrangling began with gathering three datasets. First dataset which Udacity made readily available for manual download represents cases in which datasets subject to analysis for certain projects are provided by an entity or a project manager. The last two datasets which were programmatically downloaded by using <em>Requests</em> and <em>Tweepy</em> packages represent cases in which data analysts or data scientists scrape data available online, a method which is most appropriate for reproducibility and scalability.</p>
+<p>Next, these datasets were assessed for quality and tidiness issues or problems in the content and structure of the data, which  would significantly complicate the processes for analyzing data and creating visualizations to derive insights. Although the project made attempts to perform a comprehensive assessment of the data, the assessments documented here may not be the only issues that must be addressed depending on the questions or problems of interest. In fact, potential cases in which questions or problems are not defined until the exploratory data analysis phase suggest the need to re-visit the assessments if these do not streamline the investigation of the questions and problems of interest. Also, note that assessing data not only encompasses identification of issues but covers simply understanding the content and structure of the data. <strong>Assessing Data</strong> would be even more comprehensive if comments on the basic content and structure of the three datasets were documented as well.</p>
+<p>Effective assessments of the quality and tidiness issues facilitated the next step of data wrangling, <em>cleaning data</em>. For each assessment, a step-by-step actionable plan for addressing the issue was documented, which were then translated into codes. After executing the codes, the results were tested to verify whether the operation resolved the identified issue. If the results show another issue that would potentially affect the data analysis and visualization, then the three steps, <em>define</em>, <em>code</em>, and <em>test</em>, need to be repeated to address the new issue.</p>
+<p>At the end of the data wrangling phase, cleaned datasets were stored as a separate file and made available for the next part of this project, <strong>Part 2: Exploratory Data Analysis (EDA) and Data Visualization</strong>. These now functional datasets are expected to facilitate the investigation and augmentation of the data to maximize the potential of the analyses and deriving insights from visualizations. However, based on the questions or problems raised in this phase of the data analysis, some steps from data wrangling may need to be repeated. If the gathered data is insufficient to address these questions or problems, then all steps from data wrangling need to be repeated. As such, data wrangling definitely defines a bulk of the data analysis and is likely iterated throughout the course of the analysis to ensure that analyzing and visualizing data to draw insights becomes possible, at the least.</p>
 
 </div>
 </div>
